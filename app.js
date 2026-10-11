@@ -3,10 +3,11 @@
  * Untuk demo, data produk di bawah dipakai bila backend belum dikonfigurasi.
  */
 const CONFIG = {
-  WHATSAPP_NUMBER: "6281234567890",
-  API_URL: "", // URL endpoint aman Anda, setelah backend/proxy disiapkan.
-  USE_DEMO_DATA: true
+  WHATSAPP_NUMBER: "6285664791642",
+  API_URL: "https://script.google.com/macros/s/AKfycbzCOCUS7xNKvXKSdynqPrk7z4Sm7phLrGmw60LrmRD30NdOs3QmMVZ-e-3B6otRzaGU/exec",
+  USE_DEMO_DATA: false
 };
+
 const DEMO_PRODUCTS = [
   {sku:"BRG001",name:"Botol Minum",category:"Perlengkapan",price:25000,stock:20,image:"",active:true},
   {sku:"BRG002",name:"Tas Belanja",category:"Aksesori",price:18000,stock:12,image:"",active:true},
