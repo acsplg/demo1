@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153e35">
+  <title>Toko Anda — Belanja Online</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./"><span class="brand-mark">T</span><span><strong>Toko Anda</strong><small>Belanja mudah, pesan via WhatsApp</small></span></a>
+    <button id="cartToggle" class="cart-button" aria-label="Buka keranjang">Keranjang <span id="cartCount">0</span></button>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div><p class="eyebrow">TOKO ONLINE</p><h1>Temukan kebutuhan<br>Anda di sini.</h1><p class="hero-copy">Pilih produk, masukkan ke keranjang, lalu lanjutkan pesanan melalui WhatsApp.</p></div>
+      <div class="hero-art" aria-hidden="true"><span>✦</span><div class="hero-box">TOKO<br><b>ANDA</b></div></div>
+    </section>
+    <section class="toolbar">
+      <div><h2>Daftar Produk</h2><p id="productStatus" class="muted">Memuat produk…</p></div>
+      <input id="searchInput" type="search" placeholder="Cari produk…" aria-label="Cari produk">
+    </section>
+    <nav id="categoryNav" class="categories" aria-label="Kategori produk"></nav>
+    <section id="productGrid" class="product-grid" aria-live="polite"></section>
+  </main>
+  <div id="cartBackdrop" class="backdrop"></div>
+  <aside id="cartDrawer" class="cart-drawer" aria-label="Keranjang belanja" aria-hidden="true">
+    <div class="drawer-head"><div><p class="eyebrow">PESANAN ANDA</p><h2>Keranjang</h2></div><button id="closeCart" class="icon-button" aria-label="Tutup keranjang">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <div class="total-row"><span>Total</span><strong id="cartTotal">Rp0</strong></div>
+      <form id="checkoutForm" class="checkout-form">
+        <label>Nama pemesan<input id="customerName" required maxlength="100" placeholder="Nama Anda"></label>
+        <label>Catatan / alamat (opsional)<textarea id="customerNote" rows="2" maxlength="500" placeholder="Alamat atau catatan pesanan"></textarea></label>
+        <button class="primary-button" type="submit">Lanjutkan ke WhatsApp <span>↗</span></button>
+        <p class="tiny muted">Pesanan baru dianggap disetujui setelah dikonfirmasi oleh admin toko.</p>
+      </form>
+    </div>
+  </aside>
+  <footer class="footer"><span>© <span id="year"></span> Toko Anda</span><span>Pesan langsung melalui WhatsApp</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
